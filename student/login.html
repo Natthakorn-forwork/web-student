@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Student Login</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Student Login</h2>
+        <p class="subtitle">ระบบนักศึกษา</p>
+
+        <form onsubmit="login(event)">
+            <div class="input-group">
+                <label>รหัสนักศึกษา</label>
+                <input type="text" id="studentId" >
+            </div>
+
+            <div class="input-group">
+                <label>รหัสผ่าน</label>
+                <input type="password" id="password" >
+            </div>
+
+            <a href="student.html" id="login-btn">เข้าสู่ระบบ</a>
+        </form>
+
+        <div class="contact-admin">
+            <p>ไม่สามารถเข้าสู่ระบบได้?</p>
+            <a href="mailto:admin@school.ac.th">ติดต่อแอดมิน</a>
+        </div>
+    </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

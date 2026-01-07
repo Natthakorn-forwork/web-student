@@ -1,0 +1,123 @@
+/* === ของเดิม (Dashboard) คงไว้ === */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f4f7fb;
+}
+
+.app { display: flex; height: 100vh; }
+
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg,#0d47a1,#1565c0);
+    color: white;
+    padding: 25px 20px;
+}
+
+.sidebar nav button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sidebar nav button.active,
+.sidebar nav button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.content { flex: 1; display: flex; flex-direction: column; }
+
+.topbar {
+    background: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.page { display: none; padding: 25px; }
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* === รายชื่อครู === */
+.teacher-item {
+    padding: 14px;
+    background: #f1f5fb;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.teacher-item:hover {
+    background: #e3f2fd;
+}
+
+/* === MODAL PROFILE === */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-card {
+    background: white;
+    width: 380px;
+    border-radius: 18px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.avatar {
+    font-size: 60px;
+}
+
+.subject {
+    color: #1565c0;
+    font-weight: 600;
+}
+
+.info, .bio {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 15px;
+}
+.kacha-img{
+    width: 100%;
+    height: 100%;
+    border: solid rgb(28, 11, 180) 10px;
+    border-radius: 15px;
+}

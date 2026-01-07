@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ระบบนักศึกษา</title>
+<link rel="stylesheet" href="student.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Student</h2>
+        <nav>
+            <button onclick="show('schedule')" class="active">ตารางเรียน</button>
+            <button onclick="show('teachers')">ครูผู้สอน</button>
+            <button onclick="show('attendance')">ประวัติการมา</button>
+            <button onclick="show('grades')">เกรด / คะแนน</button>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="content">
+        <header class="topbar">
+            <span>Student Dashboard</span>
+            <button class="logout" onclick="logout()">ออกจากระบบ</button>
+        </header>
+
+        <section id="schedule" class="page"></section>
+        <section id="teachers" class="page"></section>
+        <section id="attendance" class="page"></section>
+        <section id="grades" class="page"></section>
+    </main>
+
+</div>
+
+<!-- 🔵 Popup โปรไฟล์คุณครู -->
+<div id="teacherModal" class="modal">
+    <div class="modal-card">
+        <button class="close" onclick="closeTeacher()">×</button>
+
+        <img src="../teacher/image/kacha.jpg" alt="" class="kacha-img">
+        <h3 id="tName"></h3>
+        <p class="subject" id="tSubject"></p>
+
+        <div class="info">
+            <p><strong>เบอร์โทร:</strong> <span id="tPhone"></span></p>
+            <p><strong>Email:</strong> <span id="tEmail"></span></p>
+            <p><strong>ห้องประจำ:</strong> <span id="tRoom"></span></p>
+        </div>
+
+        <div class="bio">
+            <h4>ประวัติ / ความเชี่ยวชาญ</h4>
+            <p id="tBio"></p>
+        </div>
+    </div>
+</div>
+
+<script src="student.js"></script>
+</body>
+</html>

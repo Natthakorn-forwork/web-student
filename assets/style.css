@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(145deg, #0d1b2a, #1b3a5f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Container */
+.portal-container {
+    width: 100%;
+    max-width: 960px;
+    padding: 40px 30px;
+}
+
+/* Header */
+.portal-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portal-header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.portal-header p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #cfd8dc;
+}
+
+/* Grid */
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Cards */
+.role-card {
+    background: #ffffff;
+    color: #0d1b2a;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-decoration: none;
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.25);
+
+    transition: all 0.25s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 28px 55px rgba(0,0,0,0.35);
+}
+
+/* Icon */
+.role-card .icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.role-card h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Description */
+.role-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #546e7a;
+}
+
+/* Role Accent */
+.role-card.student {
+    border-top: 5px solid #1e88e5;
+}
+
+.role-card.teacher {
+    border-top: 5px solid #2e7d32;
+}
+
+.role-card.admin {
+    border-top: 5px solid #c62828;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #b0bec5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .portal-header h1 {
+        font-size: 26px;
+    }
+}
