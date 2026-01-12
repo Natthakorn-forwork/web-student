@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ระบบอาจารย์</title>
+<link rel="stylesheet" href="teacher.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Teacher</h2>
+        <nav>
+            <button onclick="show('attendance')" class="active">เช็คชื่อ</button>
+            <button onclick="show('schedule')">ตารางสอน</button>
+            <button onclick="show('profile')">โปรไฟล์</button>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="content">
+        <header class="topbar">
+            <span>Teacher Dashboard</span>
+            <button class="logout" onclick="logout()">ออกจากระบบ</button>
+        </header>
+
+        <section id="attendance" class="page"></section>
+        <section id="schedule" class="page"></section>
+        <section id="profile" class="page"></section>
+    </main>
+
+</div>
+
+<script src="teacher.js"></script>
+</body>
+</html>
