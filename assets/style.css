@@ -6,11 +6,63 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: linear-gradient(145deg, #0d1b2a, #1b3a5f);
+    background: #f6f8fa;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #333;
+    padding-top: 56px; /* match navbar height */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: #ffffffcc; /* slight translucency */
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(16,24,40,0.06);
+    z-index: 1000;
+}
+
+.navbar .nav-inner {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .brand {
+    font-weight: 700;
+    color: #111827;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 18px;
+}
+
+.navbar a {
+    color: #374151;
+    margin: 0;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.navbar a:hover {
+    background: rgba(59,130,246,0.08);
+    color: #0b5ed7;
 }
 
 /* Container */
@@ -68,8 +120,23 @@ body {
 
 /* Icon */
 .role-card .icon {
-    font-size: 42px;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: block;
     margin-bottom: 15px;
+}
+
+.role-card.student .icon {
+    background: linear-gradient(135deg,#e6f0ff,#cfe3ff);
+}
+
+.role-card.teacher .icon {
+    background: linear-gradient(135deg,#eef7f1,#dff3e6);
+}
+
+.role-card.admin .icon {
+    background: linear-gradient(135deg,#fff1f0,#ffd6d9);
 }
 
 /* Title */

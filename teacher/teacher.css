@@ -4,33 +4,74 @@
 body {
     margin: 0;
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: #f4f7fb;
+    background: #f4f7fa;
+    padding-top: 56px;
 }
 
-.app { display: flex; height: 100vh; }
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(16,24,40,0.06);
+    z-index: 1000;
+}
+
+.navbar .nav-inner { max-width: 1100px; width: 100%; padding: 0 20px; display:flex; justify-content:space-between; align-items:center; }
+.navbar .brand { font-weight:700; color:#111827; text-decoration:none; }
+.navbar .links { display:flex; gap:14px; }
+.navbar a { color:#374151; text-decoration:none; padding:8px 12px; border-radius:8px; font-weight:600; }
+.navbar a:hover { background: rgba(59,130,246,0.08); color:#0b5ed7; }
+
+.app { display: flex; height: calc(100vh - 56px); }
 
 .sidebar {
     width: 240px;
-    background: linear-gradient(180deg,#0d47a1,#1565c0);
-    color: white;
-    padding: 25px 20px;
+    background: #ffffff;
+    color: #111827;
+    padding: 22px 18px;
+    border-right: 1px solid rgba(15,23,42,0.06);
+    display: block; /* ensure visible */
+    z-index: 1;
 }
 
 .sidebar nav button {
     width: 100%;
     background: transparent;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: left;
     padding: 12px;
     margin-bottom: 8px;
     border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .sidebar nav button.active,
 .sidebar nav button:hover {
-    background: rgba(255,255,255,0.2);
+    background: #eef6ff;
+    color: #0b57d0;
+}
+
+.sidebar h2 { margin: 0 0 18px; font-size: 20px; color: #0f172a; }
+
+.sidebar nav button { position: relative; }
+.sidebar nav button.active:before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 8px;
+    bottom: 8px;
+    width: 4px;
+    background: #0b57d0;
+    border-radius: 4px;
 }
 
 .content { flex: 1; display: flex; flex-direction: column; }
@@ -40,16 +81,39 @@ body {
     padding: 15px 25px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #ddd;
+}
+
+.top-nav {
+    display: flex;
+}
+
+.top-nav button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.top-nav button:hover {
+    color: #000;
 }
 
 .page { display: none; padding: 25px; }
 
 .card {
-    background: white;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     border-radius: 14px;
     padding: 22px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* === รายชื่อครู === */
